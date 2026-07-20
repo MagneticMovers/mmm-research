@@ -1,0 +1,11 @@
+title: Magnetic Matter Movers
+description: Magnetic machines, beamed-energy propulsion, and minimum-chemical space transportation architecture
+url: "https://magneticmattermovers.com"
+theme: jekyll-theme-primer
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - CNAME

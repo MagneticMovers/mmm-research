@@ -1,0 +1,12 @@
+# Private business/legal/personal documents — never commit
+private/
+*provisional*
+*Master_Log*
+mmm_program_state_summary*
+mmm_partA_filing_brief*
+mmm_llc_sequence_checklist*
+mmm_decision_record*
+mmm_order_sheet*
+# OS noise
+.DS_Store
+Thumbs.db
