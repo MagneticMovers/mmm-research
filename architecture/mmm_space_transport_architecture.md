@@ -19,7 +19,7 @@ Total capital ladder: $0.1B pilot → $4–12B cargo → $23–84B crew. Every p
 ---
 
 ## Epistemic Convention (owner standard, adopted Jul 20, 2026)
-Claims in this study carry three tiers: **[E] established** (textbook physics, published data), **[I] inference** (first-cut analysis, scaling laws, our sims — method-limited), **[S] speculation** (demand models, far-horizon concepts). Blanket assignments unless marked otherwise: Physics Ground Rules = [E]. Sim results = [I] (v0/v1 are first-cut: limited Monte Carlo, reduced-order blooming). **All dollar figures = [I]-grade approximations from memory-sourced cost curves, NOT verified quotes — and they sit atop 5+ step inference chains (payload fraction × capex × rate × amortization) where errors compound; treat every $/kg as ±2× until work item 22 (citation + uncertainty pass) closes.** Demand/market claims = [S]. Governing equations for checkable math: rocket equation Δv=vₑln(m₀/m₁) · jet power P=Tvₑ/2 · magnetic pressure B²/2μ₀ · Inductrack L/D≈v/w · Bradley-Herrmann N_D scaling · F=BIL — implementations in mmm_waveoptics_v0/v1.py and the conversation-run models.
+Claims in this study carry three tiers: **[E] established** (textbook physics, published data), **[I] inference** (first-cut analysis, scaling laws, our sims — method-limited), **[S] speculation** (demand models, far-horizon concepts). Blanket assignments unless marked otherwise: Physics Ground Rules = [E]. Sim results = [I] (v0/v1 are first-cut: limited Monte Carlo, reduced-order blooming). **All dollar figures = [I]-grade approximations from memory-sourced cost curves, NOT verified quotes — and they sit atop 5+ step inference chains (payload fraction × capex × rate × amortization) where errors compound; treat every $/kg as ±2× until work item 22 (citation + uncertainty pass) closes.** Demand/market claims = [S]. *Amended Jul 20, 2026: the Cost Calibration Doctrine (extension, end of document) governs how dollar figures are stated and judged — bands with honest midpoints plus a 3× survivability test; the item-22 citation pass first cut (this directory) sources the headline rows, and its corrections are applied in this commit.* Governing equations for checkable math: rocket equation Δv=vₑln(m₀/m₁) · jet power P=Tvₑ/2 · magnetic pressure B²/2μ₀ · Inductrack L/D≈v/w · Bradley-Herrmann N_D scaling · F=BIL — implementations in mmm_waveoptics_v0/v1.py and the conversation-run models.
 
 ## Physics Ground Rules
 
@@ -66,9 +66,9 @@ Claims in this study carry three tiers: **[E] established** (textbook physics, p
 
 ### System A — Coilgun Freight (build first, with the pilot)
 - **Staged-to-LEO (primary):** 9.8 km/s muzzle, 4.9 km track, 1,000 g, 48 GJ/shot (36 GW pulse). Slug: 180 kg shell + 190 kg circularization kick → **~630 kg to LEO, ~$150/kg**
-- **Direct-to-escape (variant):** 13.05 km/s muzzle, 8.7 km track, 85 GJ (64 GW pulse); 670 kg cargo to escape at **$190/kg** (5,000 shots/yr) — vs $5–10k/kg chemical
+- **Direct-to-escape (variant):** 13.05 km/s muzzle, 8.7 km track, 85 GJ (64 GW pulse); 670 kg cargo to escape at **$190/kg** (5,000 shots/yr) — vs published chemical pricing: ~$3–7k/kg to LEO (2026 Falcon-class list/rideshare), $5–10k/kg escape-class [sourced, item-22 pass]
 - **Atmosphere transit (4 km mountain exit):** 516 m/s toll, peak 109 kW/cm² for <1 s, ~1 kg ablated (carbon-phenolic, 3× margin carried)
-- **Gating tech: pulsed power.** 36–64 GW for ~1.3 s = flywheel motor-generator / compensated pulsed-alternator farms (batteries and capacitors both disqualify). 2,800× the largest EM launcher built — the biggest extrapolation in the portfolio
+- **Gating tech: pulsed power.** 36–64 GW for ~1.3 s = flywheel motor-generator / compensated pulsed-alternator farms (batteries and capacitors both disqualify). ~1,500–2,700× (variant-dependent) the largest EM launcher built (Navy/GA ~33 MJ class) — the biggest extrapolation in the portfolio
 - **Coilgun, not railgun:** no contact at 10–13 km/s. 25 MW feed → 20+ shots/day. Cargo: water, cryogens, metals, propellant, artillery-grade electronics (15,000 g proven)
 
 ### System B — Maglev + Laser-Thermal Cargo (build second)
@@ -322,7 +322,7 @@ Work item 1 status: **first-cut split-step simulation complete** (script: `mmm_w
 ---
 
 ## Work Item Status Ledger (maintained live; items close when completed, without prompting)
-*Conventions: the ledger is ordered easiest → hardest, and IDs match that order 1–19. IDs were renumbered once to complexity order by owner decision, Jul 19, 2026, with all cross-references updated in the same edit; they are frozen henceforth. CLOSED items are immutable records. Last updated Jul 19, 2026.*
+*Conventions: the ledger is ordered easiest → hardest, and IDs match that order 1–19. IDs were renumbered once to complexity order by owner decision, Jul 19, 2026, with all cross-references updated in the same edit; they are frozen henceforth. CLOSED items are immutable records. Last updated Jul 20, 2026.*
 
 ### Tier 1 — Desk & paper, current phase (0–1): items 1–10, hours to weeks each, ~$0
 | # | Item | Status |
@@ -338,10 +338,11 @@ Work item 1 status: **first-cut split-step simulation complete** (script: `mmm_w
 | 9 | Market/utilization model (flight-rate demand curves) | OPEN |
 | 10 | Phase 1 sim completion (inherits from item 1): PCI stability check, distributed-array synthesis, ≥100-draw Monte Carlo, radiometric ledger | OPEN — blooming coupling and end-of-burn sweep already delivered by v1; scope reduced |
 | 20 | Cadence endurance rig spec: automated subscale coilgun, 5,000-cycle campaign, condition monitoring + cost-per-shot ledger (~$10–30k, Phase 2) | OPEN — new under cadence doctrine |
-| 21 | Beamed-line availability analysis: NM cloud/wind statistics × Laser Clearinghouse windows → flyable-days model feeding the cadence economics | OPEN — red-team finding; Tier 1 desk work |
-| 22 | Citation & uncertainty pass: source every cost figure, band every result, apply [E]/[I]/[S] labels line-by-line per the Epistemic Convention — precondition for journal submission AND now mandated by owner's accuracy standard | OPEN — red-team finding, elevated Jul 20 |
+| 21 | Beamed-line availability analysis: NM cloud/wind statistics × Laser Clearinghouse windows → flyable-days model feeding the cadence economics | OPEN — **first cut v0 published Jul 20** (mmm_item21_flyable_days_v0, this directory): ~200 flyable days/yr (150–250); LCH quantified from published observatory data; availability binds at the 2,000-flights/yr tier; v1 refinement scope listed therein |
+| 22 | Citation & uncertainty pass: source every cost figure, band every result, apply [E]/[I]/[S] labels line-by-line per the Epistemic Convention — precondition for journal submission AND now mandated by owner's accuracy standard | OPEN — **kickoff published Jul 20** (mmm_item22_citation_pass_v0, this directory): 11 headline rows sourced; corrections applied to this document in the same commit; full inference-chain pass remains |
 | 23 | Tube exit-aperture concept: fast shutter vs. plasma window vs. per-shot membrane; km-scale thermal expansion joints | OPEN — red-team finding; Tier 2 |
 | 24 | Beam-loss range-safety footprint analysis + relay pointing-stability budget under thermal load | OPEN — red-team finding; Tier 2 |
+| 25 | Trademark application: "Magnetic Matter Movers" word mark via USPTO TEAS — base fee $350/class (+$200/class surcharge if using custom goods/services description instead of the ID Manual); file after LLC formation so the LLC is owner; likely classes: research/publication services + catalog hardware (one class suffices to start). Not deadline-bound: common-law rights accrue from use, and the dated public repo establishes first use | OPEN — new Jul 20, 2026 |
 
 ### Tier 2 — Engineering analyses, Phases 1–3: items 11–16, weeks to months each, still simulation/paper
 | # | Item | Status |
@@ -366,7 +367,7 @@ Work item 1 status: **first-cut split-step simulation complete** (script: `mmm_w
 ## Extension — Environmental Ledger & Cadence Doctrine (Jul 19, 2026)
 
 ### Environmental ledger (thesis-relevant: constraint as moat)
-Operational emissions are electricity: 115 MWh/t (beamed) and 21 MWh/t (gun) — near-zero carbon from NM solar; exhaust is steam; no soot, alumina, perchlorates, hypergolics, or deluge contamination anywhere in the stack. Chemical launch, by contrast, carries ~25–30 t CO₂/t payload plus ~1 t black carbon per launch injected at stratospheric altitude (≈500× surface warming potency) — a compounding regulatory exposure that grows with exactly the industry-wide cadence this program bets on. Tightening launch regulation is a tailwind for this architecture.
+Operational emissions are electricity: 115 MWh/t (beamed) and 21 MWh/t (gun) — near-zero carbon from NM solar; exhaust is steam; no soot, alumina, perchlorates, hypergolics, or deluge contamination anywhere in the stack. Chemical launch, by contrast, carries ~25–30 t CO₂/t payload plus ~0.3–3 t black carbon per launch (engine/cycle-dependent) injected at stratospheric altitude (≈500× surface warming potency — Ryan et al. 2022, sourced) — a compounding regulatory exposure that grows with exactly the industry-wide cadence this program bets on. Tightening launch regulation is a tailwind for this architecture.
 
 **Honest residuals, ranked:** (1) sonic booms — the dominant real externality at 20+ shots/day; priced into WSMR-adjacent siting; (2) ~24 t H₂O per beamed launch partly above the tropopause — monitor-and-report item, owned in the white paper preemptively; (3) ~1 kg ablated carbon per gun shot (≈5 t/yr at full cadence — negligible vs. aviation); (4) beam-path wildlife/aviation safety — radar-triggered beam interrupt, Phase 3 requirement.
 
@@ -383,3 +384,29 @@ Adversarial self-review ahead of any public submission. **Hidden advantages bank
 **Hidden liabilities opened as work items:** beamed-line weather/clearance availability unquantified (21); tube exit aperture and km-scale expansion unaddressed (23); relay μrad pointing under load likely 2–3× mass growth, and cargo beam-loss impact footprints undrafted (24); dual-use/ITAR posture for a steerable near-GW array to be decided deliberately, before external framing decides it for us.
 
 **Peer-review posture:** the study survives review as a *concept/architecture paper* (Acta Astronautica / JBIS / AIAA class) contingent on item 22 — citations on every cost figure, uncertainty bands on every result, claims scoped to evidence. It is not, and does not claim to be, a validated engineering study; the gate/kill-criteria apparatus is the submission's differentiating strength and should be foregrounded.
+
+---
+
+## Extension — Cost Calibration Doctrine (Jul 20, 2026)
+
+**Motivation.** The item-22 citation pass showed that memory-sourced cost errors are not uniformly directional and therefore cannot be fixed by a single "% of realism" dial: the chemical-launch comparison was stale in the *unfavorable* direction (published 2026 prices are lower than the strawman), the EM-launcher extrapolation ratio was ~5% high, and the black-carbon figure was fine at midpoint but banded too narrowly. Meanwhile the published record on first-of-a-kind megaprojects (pioneer-plant and aerospace overrun literature) puts early capital estimates at roughly **40–60% of final actuals** — 2–3× growth is the historical norm, not the exception. A program that publishes optimistic points is betting reviewers won't know this; they will.
+
+**The doctrine (amends the Epistemic Convention; owner-adopted):**
+
+1. **Physics exact.** No calibration dial ever applies to [E]-tier claims.
+2. **Costs are bands, not points.** The stated midpoint is the honest estimate — never a target, never a goal-seeded number. Default band ×2–3 for first-of-a-kind items until item 22 closes that figure with sources; quotes and bids narrow bands, opinions don't.
+3. **The 3× survivability test.** Every headline $/kg or capex claim carries the question: *does the architecture keep its advantage over the incumbent at 3× the estimate?* Advantage retained at 3× = the claim is load-bearing; advantage inverted inside the band = the claim is decorative and must not carry an argument.
+4. **Kill-criterion restatement.** A cost estimate "fails" when the *advantage inverts inside the band* — not when the midpoint moves. An estimate that doubles while keeping a 10× advantage is a pass and is reported as such.
+
+**The test applied to current headline claims:**
+
+| Claim | Midpoint | At 3× | Advantage at 3×? |
+|---|---|---|---|
+| Gun freight $/kg to LEO | $150 | $450 | **Yes** — vs $3–7k/kg published chemical; ~10× margin survives |
+| Beamed cargo $/kg (500–2,000 flights/yr) | $323–870 | ~$1,000–2,600 | **Yes at rate** — still at/below Falcon parity; but break-even flight rate ≈3× higher → item 9 (demand model) is the binding analysis, not the capex digit |
+| Marginal energy cost | $11/kg | $33/kg | **Trivially** — remains noise against any incumbent |
+| Phase 0–2 program cost | $270–$500k | scales | Absorbable at self/SBIR funding tiers by design |
+| Crew capex (System C) | $23–84B | $69–252B | **No** — not robust at 3×; consistent with the already-accepted end state (gate plan Phase 6 kill: chemical crew taxis remain the permanent answer) |
+
+**Reading:** the architecture survives the realistic number everywhere the program actually bets. The one claim that fails the 3× test (crew) already carries its own kill criterion and an acceptable end state — which is the correct shape for a failing cost claim: pre-declared, gated, and non-load-bearing. This table, maintained as estimates are re-sourced under item 22, is itself the anti-fragility exhibit for reviewers and funders: the program does not need its optimistic numbers to be right.
+
