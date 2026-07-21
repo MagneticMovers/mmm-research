@@ -375,7 +375,7 @@ The program's open work is maintained as a live status ledger (Appendix A), orde
 | 20 | Cadence endurance rig spec: automated subscale coilgun, 5,000-cycle campaign, condition monitoring + cost-per-shot ledger (~$10–30k, Phase 2) | OPEN — new under cadence doctrine |
 | 21 | Beamed-line availability analysis: NM cloud/wind statistics × Laser Clearinghouse windows → flyable-days model feeding the cadence economics | OPEN — **first cut v0 published Jul 20** (mmm_item21_flyable_days_v0, this directory): ~200 flyable days/yr (150–250); LCH quantified from published observatory data; availability binds at the 2,000-flights/yr tier; v1 refinement scope listed therein |
 | 22 | Citation & uncertainty pass: source every cost figure, band every result, apply [E]/[I]/[S] labels line-by-line per the Epistemic Convention — precondition for journal submission AND now mandated by owner's accuracy standard | OPEN — **kickoff published Jul 20** (mmm_item22_citation_pass_v0, this directory): 11 headline rows sourced; corrections applied to this document in the same commit; full inference-chain pass remains |
-| 23 | Tube exit-aperture concept: fast shutter vs. plasma window vs. per-shot membrane; km-scale thermal expansion joints | OPEN — red-team finding; Tier 2 |
+| 23 | Tube exit-aperture concept: fast shutter vs. plasma window vs. per-shot membrane; km-scale thermal expansion joints | **CLOSED Jul 21, 2026** — concept selected (mmm_item23_exit_aperture_v0, this directory): two-stage muzzle vestibule — slow outer gate valve + per-shot burst membrane; phase-locked rotary shutter documented as alternate; expansion clause disposed to standard bellows practice (LIGO-class existence proof). Verification folds into item 20 (cycle life) and Phase 2 track design |
 | 24 | Beam-loss range-safety footprint analysis + relay pointing-stability budget under thermal load | OPEN — red-team finding; Tier 2 |
 | 25 | Trademark application: "Magnetic Matter Movers" word mark via USPTO TEAS — base fee $350/class (+$200/class surcharge if using custom goods/services description instead of the ID Manual); file after LLC formation so the LLC is owner; likely classes: research/publication services + catalog hardware (one class suffices to start). Not deadline-bound: common-law rights accrue from use, and the dated public repo establishes first use | OPEN — new Jul 20, 2026 |
 
@@ -422,7 +422,7 @@ The program's open work is maintained as a live status ledger (Appendix A), orde
 | Jul 17 | Extension: external validation & design imports (28 GHz program) |
 | Jul 19 | Extensions: wave-optics first-cut results (v0 + v1 gauntlet); test infrastructure & range plan; environmental ledger & cadence doctrine; red-team register. Ledger renumbered to complexity order (frozen) |
 | Jul 20 | Epistemic Convention adopted; Cost Calibration Doctrine adopted; item-21 and item-22 first cuts published; corrections applied; items 20–25 added. Public repository and site live (prior-art date) |
-| Jul 21 | This restructuring for journal layout — content preserved; structure, TOC, and section numbering added. Changes go forward in dated commits |
+| Jul 21 | Restructuring for journal layout — content preserved; structure, TOC, and section numbering added. Item 23 closed same date (exit-aperture concept note, this directory); ledger row updated. Changes go forward in dated commits |
 
 ---
 
